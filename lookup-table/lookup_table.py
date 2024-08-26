@@ -2,10 +2,10 @@ import pandas as pd
 import sys
 
 def lookup_table(temp : int, rainfall : int, soil_type : str):
-    df = pd.read_excel('data/lookup.xlsx')
+    df = pd.read_excel('lookup-table/data/lookup.xlsx')
 
     #select rows which matches with soil_type parameter from soil-type or soil-type2 column
-    df = df[(df['soil-type'] == soil_type) | (df['soil-type2'] == soil_type)]
+    df = df[(df['soil-type'] == soil_type) | (df['soil-type-2'] == soil_type)]
 
     #select rows which the parameters fall within the optimal range
     df = df[(df['temp-opt-min'] <= temp) & (df['temp-opt-max'] >= temp)]
