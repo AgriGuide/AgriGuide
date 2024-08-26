@@ -36,7 +36,3 @@ if __name__ == "__main__":
     result = lookup_table(temp, rainfall, soil_type)
 
     sys.exit(result)
-
-
-
-    
